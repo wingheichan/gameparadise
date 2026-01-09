@@ -60,7 +60,7 @@
     const sourcePairs = getSelectedPairs();
     const selected = shuffle([...sourcePairs]).slice(0, neededPairs);
     const deck = [];
-    selected.forEach((p, idx) => { deck.push({ id:`p${idx}-a", pairId:idx, label:p.a }); deck.push({ id:`p${idx}-b", pairId:idx, label:p.b }); });
+    selected.forEach((p, idx) => { deck.push({ id:`p${idx}-a`, pairId:idx, label:p.a }); deck.push({ id:`p${idx}-b`, pairId:idx, label:p.b }); });
     return shuffle(deck);
   }
 
