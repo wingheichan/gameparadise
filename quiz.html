@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz — Play</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Quiz</h1>
+    <nav aria-label="Breadcrumb">
+      <a class="tab-btn" href="index.html">🏠 Home</a>
+      <div class="spacer"></div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="quizPlay" class="panel">
+      <div class="progress-row">
+        <div id="quizProgress">Question 0/0</div>
+        <div id="quizScore">Correct: 0</div>
+        <div id="questionTimer">Q Time: 0s</div>
+      </div>
+      <div id="questionText" class="question"></div>
+      <ul id="answersList" class="answers" role="list"></ul>
+      <div class="actions">
+        <button id="nextQuestionBtn" class="secondary" disabled>Next</button>
+        <button id="restartQuizBtn" class="ghost" hidden>Restart</button>
+      </div>
+      <div id="quizStatus" class="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><small>© <span id="year"></span> Learning Games</small></footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

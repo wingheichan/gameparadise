@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learning Games • Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Learning Games</h1>
+    <nav aria-label="Primary">
+      <button class="tab-btn" data-tab="quiz" aria-controls="quiz" aria-selected="true">Quiz</button>
+      <button class="tab-btn" data-tab="memory" aria-controls="memory" aria-selected="false">Memory</button>
+      <div class="spacer"></div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- QUIZ HOME -->
+    <section id="quiz" class="tab active" aria-labelledby="Quiz">
+      <div class="panel">
+        <div class="controls">
+          <label for="quizCategory">Category</label>
+          <select id="quizCategory" aria-label="Select quiz category"></select>
+          <label for="quizSubcategory">Subcategory</label>
+          <select id="quizSubcategory" aria-label="Select quiz subcategory"></select>
+          <button id="goToIntroBtn" class="primary">Start Quiz</button>
+        </div>
+        <div id="quizStatus" class="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- MEMORY -->
+    <section id="memory" class="tab" aria-labelledby="Memory" hidden>
+      <div class="panel">
+        <div class="controls">
+          <label for="memoryCategory">Category</label>
+          <select id="memoryCategory" aria-label="Memory category"></select>
+          <label for="memorySubcategory">Subcategory</label>
+          <select id="memorySubcategory" aria-label="Memory subcategory"></select>
+
+          <label for="memoryDifficulty">Difficulty</label>
+          <select id="memoryDifficulty" aria-label="Select memory difficulty">
+            <option value="easy">Easy (4×4)</option>
+            <option value="medium">Medium (5×4)</option>
+            <option value="hard">Hard (6×6)</option>
+          </select>
+
+          <label for="memoryMode">Mode</label>
+          <select id="memoryMode" aria-label="Select game mode">
+            <option value="closed" selected>Closed</option>
+            <option value="preview">Preview then close</option>
+            <option value="always-open">Always open</option>
+          </select>
+
+          <label for="previewDuration">Preview Duration (sec)</label>
+          <input id="previewDuration" type="number" min="5" max="30" value="10" aria-label="Preview duration in seconds" />
+
+          <button id="startMemoryBtn" class="primary">Start Game</button>
+        </div>
+        <div id="memoryStatus" class="status" aria-live="polite"></div>
+        <div class="stats">
+          <span id="movesCount">Moves: 0</span>
+          <span id="timer">Pair Time: 0s</span>
+          <span id="matchedPairs">Matched: 0</span>
+          <span id="memoryScore">Score: 0</span>
+        </div>
+        <div id="grid" class="grid" aria-label="Memory card grid" role="grid"></div>
+        <div class="actions">
+          <button id="restartMemoryBtn" class="ghost" hidden>Restart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><small>© <span id="year"></span> Learning Games</small></footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz-home.js"></script>
+  <script src="js/memory.js"></script>
+</body>
+</html>

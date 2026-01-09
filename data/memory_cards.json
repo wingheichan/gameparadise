@@ -1,0 +1,108 @@
+{
+  "vocab_es_en": {
+    "lesson_1": [
+      {
+        "a": "perro",
+        "b": "dog"
+      },
+      {
+        "a": "gato",
+        "b": "cat"
+      },
+      {
+        "a": "casa",
+        "b": "house"
+      },
+      {
+        "a": "libro",
+        "b": "book"
+      },
+      {
+        "a": "rojo",
+        "b": "red"
+      },
+      {
+        "a": "verde",
+        "b": "green"
+      },
+      {
+        "a": "azul",
+        "b": "blue"
+      },
+      {
+        "a": "escuela",
+        "b": "school"
+      },
+      {
+        "a": "maestro",
+        "b": "teacher"
+      },
+      {
+        "a": "estudiante",
+        "b": "student"
+      }
+    ],
+    "lesson_2": [
+      {
+        "a": "puerta",
+        "b": "door"
+      },
+      {
+        "a": "ventana",
+        "b": "window"
+      },
+      {
+        "a": "cocina",
+        "b": "kitchen"
+      },
+      {
+        "a": "baño",
+        "b": "bathroom"
+      },
+      {
+        "a": "salón",
+        "b": "living room"
+      },
+      {
+        "a": "silla",
+        "b": "chair"
+      },
+      {
+        "a": "mesa",
+        "b": "table"
+      },
+      {
+        "a": "cama",
+        "b": "bed"
+      }
+    ]
+  },
+  "symbols_matching": {
+    "basic": [
+      {
+        "a": "★",
+        "b": "star"
+      },
+      {
+        "a": "♥",
+        "b": "heart"
+      },
+      {
+        "a": "♣",
+        "b": "club"
+      },
+      {
+        "a": "♦",
+        "b": "diamond"
+      },
+      {
+        "a": "☀",
+        "b": "sun"
+      },
+      {
+        "a": "☂",
+        "b": "umbrella"
+      }
+    ]
+  }
+}

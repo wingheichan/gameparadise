@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math — Multiplication — Quiz Intro</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Math — Multiplication — Quiz Intro</h1>
+    <nav aria-label="Breadcrumb">
+      <a class="tab-btn" href="../../index.html">🏠 Home</a>
+      <div class="spacer"></div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>How this quiz works</h2>
+      <ol>
+        <li>Each question has its own timer. The timer <strong>resets every question</strong>.</li>
+        <li>Correct turns <strong>green</strong>, wrong turns <strong>red</strong>.</li>
+        <li>Final score uses: <code>score = 50 × correct + Σ(51 − time_per_question)</code>.</li>
+      </ol>
+      <p>Multiply integers. Recall times tables.</p>
+    </section>
+
+    <section class="panel">
+      <h3>Example questions</h3>
+      <div id="previewList" aria-live="polite"></div>
+      <div class="actions">
+        <button id="beginQuizBtn" class="primary">Start the quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><small>© <span id="year"></span> Learning Games</small></footer>
+
+  <script>
+    (function(){
+      const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+      const themeToggle = document.getElementById('themeToggle');
+      const stored = localStorage.getItem('theme'); if (stored === 'light') document.body.classList.add('light');
+      themeToggle && themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+        localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+      });
+    })();
+  </script>
+  <script src="../../js/intro-loader.js"></script>
+</body>
+</html>
