@@ -33,3 +33,42 @@ button.ghost { background:transparent; color:var(--muted); border:1px dashed var
 .answer-btn.correct { background: color-mix(in srgb, var(--primary), white 20%); border-color: var(--primary); color:#0b1d0b; }
 .answer-btn.incorrect { background: color-mix(in srgb, var(--danger), white 20%); border-color: var(--danger); color:#220606; }
 .progress-row { display:flex; justify-content:space-between; align-items:center; margin:.75rem 0; flex-wrap:wrap; gap:.5rem; }
+
+/* Memory 2 lines */
+/* Whole controls block is a column with gap between rows */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+/* A controls-row lays out label+input pairs in a grid */
+.controls-row {
+  display: grid;
+  gap: .5rem .75rem;       /* row gap, column gap */
+  align-items: center;
+}
+
+/* Row 1: three pairs (label+field) → 6 columns */
+.controls-row-1 {
+  grid-template-columns:
+    auto minmax(140px, 1fr)   /* Difficulty: label + select */
+    auto minmax(140px, 1fr)   /* Mode:       label + select */
+    auto minmax(120px, 1fr);  /* Preview:    label + input */
+}
+
+/* Row 2: two pairs (label+field) → 4 columns, a bit wider */
+.controls-row-2 {
+  grid-template-columns:
+    auto minmax(180px, 1fr)   /* Category:    label + select */
+    auto minmax(180px, 1fr);  /* Subcategory: label + select */
+}
+
+/* Responsive: on narrow screens, stack label above field */
+@media (max-width: 640px) {
+  .controls-row-1,
+  .controls-row-2 {
+    grid-template-columns: auto 1fr;
+  }
+}
+/* Memory 2 lines*/
