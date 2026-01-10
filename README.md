@@ -1,4 +1,4 @@
-📁 Project Structure
+```text
 learning-games/
 ├─ index.html                 # Home with two tabs: Quiz and Memory
 ├─ quiz.html                  # Quiz play page (after intro page)
@@ -22,7 +22,7 @@ learning-games/
 │     └─ lesson_3.html
 └─ assets/
    └─ favicon.svg
-
+```
 
    
 
